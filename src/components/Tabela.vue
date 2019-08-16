@@ -10,28 +10,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="l in lista" :key="l.id">
-                    <td>{{ l.site }}</td>
-                    <td>{{ l.user }}</td>
-                    <Oculto :valor="l.pass"></Oculto>
-                    <td><img @click="editar(l)" src="../assets/editar.png" alt="edit icon" class="icon"> <img @click="deletar(l)" src="../assets/apagar.png" alt="delete icon" class="icon"></td>
-                </tr>
+            <LinhaTabela :item="item" :deletar="deletar" editar="editar" v-for="item in lista" :key="item.id"/>
             </tbody>
         </table>
     </div>
 </template>
 
 <script>
-    import Oculto from "@/components/Oculto";
+    import LinhaTabela from "@/components/LinhaTabela";
+
     export default {
         name: "Tabela",
-        components: {Oculto},
+        components: {LinhaTabela},
         props:{
             lista: Array,
-            editar: Function,
             deletar: Function,
         },
         filters:{
+            // eslint-disable-next-line no-unused-vars
             ocultar(valor){
                 return '***'
             }
@@ -39,9 +35,3 @@
     }
 </script>
 
-<style>
-    .icon{
-        height: 24px;
-        width: 24px;
-    }
-</style>

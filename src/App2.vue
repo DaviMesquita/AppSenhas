@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <h1>Aula 14/08</h1>
+        <h1>Aula 14/08 | 15/08</h1>
         <Formulario :novo="novo" :salvar="salvar" :gerarSenha="gerarSenha"></Formulario>
-        <Tabela :lista="lista" :editar="editar" :deletar="deletar"></Tabela>
+        <Tabela :lista="lista" :deletar="deletar"></Tabela>
     </div>
 </template>
 

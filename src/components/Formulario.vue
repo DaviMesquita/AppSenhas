@@ -1,8 +1,8 @@
 <template>
     <div>
-        <Campo texto="Site" type="text" v-model="novo.site"/>
-        <Campo texto="Usuário" type="text" v-model="novo.user"/>
-        <Campo texto="Senha" type="password" v-model="novo.pass"/><button @click="gerarSenha">Gerar</button>
+        <Campo texto="Site" tipo="text" v-model="novo.site"/>
+        <Campo texto="Usuário" tipo="text" v-model="novo.user"/>
+        <Campo texto="Senha" tipo="password" v-model="novo.pass"/><button @click="gerarSenha">Gerar</button>
         <button @click="salvar">Salvar</button>
     </div>
 </template>
